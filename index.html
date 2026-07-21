@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web OS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Lock Screen -->
+  <div id="lockscreen">
+    <div id="fingerprint">🔒 Touch to Unlock</div>
+  </div>
+
+  <!-- OS Shell -->
+  <div id="os-shell" style="display:none;">
+    <header id="status-bar">
+      <span id="time">20:01</span>
+      <span id="battery">🔋 85%</span>
+    </header>
+
+    <main id="home-screen">
+      <button onclick="openApp('dialer')">📞 Dialer</button>
+      <button onclick="openApp('camera')">📷 Camera</button>
+      <button onclick="openApp('browser')">🌐 Browser</button>
+      <button onclick="openApp('games')">🎮 Games</button>
+      <button onclick="openApp('settings')">⚙️ Settings</button>
+      <button onclick="openApp('controlpanel')">🎛 Control Panel</button>
+      <button onclick="openApp('sound')">🔊 Sound</button>
+    </main>
+
+    <div id="app-drawer"></div>
+    <div id="notification-panel"></div>
+    <div id="aod-screen">🕒 <span id="aod-time"></span></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/gestures.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/fingerprint.js"></script>
+</body>
+</html>
